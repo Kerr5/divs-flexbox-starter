@@ -101,38 +101,61 @@ body {
   padding: 2em;
   font-size: 1.25em;
   height: 100%;
-  background-color: #424d57;
 }
 
-.wrapper {
-  /*add display:flex and set justify-content to space-between*/
-  display: flex;
-  flex-flow: row wrap;
-  /*justify-content: space-between;*/
-  align-items: center;
-  font-weight: 700;
-  background-color: #f0f2f4;
-}
-
-.div-1, .div-2, .div-3 {
-  /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
+header, 
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  /*background-color: #f0f2f4;*/
+  height: 80px;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background-color: #f0f2f4;*/
+  height: 250px;
+  width: 100%;
+}
+
+header, 
+footer,
+main {
+  border: solid 2px #424d57;
+  margin: 10px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-between;
+    background-color: #f0f2f4;
+}
+   
+.flex-container p span {
+   font-weight: bold;
+}   
+.flex-items{
   color: #424d57;
   line-height: 1.5em;
   font-size: 1.0em;
-/*  background-color: #f0f2f4;*/
-  /*height: 325px;*/ 
+  /*background-color: #f0f2f4;*/
+  height: 200px;
+  width: 30%;
+  padding: 20px;
+  flex-grow:1;
+  /*flex: 0 1 auto;  div's still crazy*/
 }
-   
-.div-2 {
-  border-right: 1px solid #555;
-  border-left: 1px solid #555;
-  padding: 0px 23px;
-}
-.div-1, .div-3 {
-  padding: 0px 23px;
+
+#div-1,
+#div-2 {
+  border-right: 2px solid #434d57;
 }
 
 
@@ -215,25 +238,38 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media all and (min-width: 1200px) {
+/*@media all and (min-width: 1200px) {
     .div-1, .div-2, .div-3 {
       flex-basis: 30%;
     }
+}*/
+/* on the 3 media screens below, why is body only half the page?*/
+@media screen and (min-width: 993px) {
+  body {
+    background-color: #959595;
+  }
 }
 
-/*@media (min-width: 768px) and (max-width: {
-    .div-1, .div-2, .div-3 {
-      border-bottom: : 1px solid #555;
-      border-left: 1px solid #555;
-    } wanted a bottom border on smaller screens
+/* On screens that are 992px or less, set the background color to blue #a9a9a9 */
+@media screen and (max-width: 992px) {
+  body {
+    background-color: pink;
+  }
 }
-*/
-@media print,
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  body {
+    background-color: #bdbdbd;
+  }
+}
+
+    /* Style adjustments for high resolution devices */
+/*@media print,
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 1.25dppx),
        (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
+}*/
 
 /* ==========================================================================
    Print styles.
