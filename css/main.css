@@ -109,7 +109,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
+
   width: 100%;
 }
 
@@ -130,6 +130,7 @@ main {
 header {
   font-weight: bold;
   font-size: 2em;
+  height: 80px;
 }
 
 .flex-container {
@@ -164,6 +165,10 @@ header {
 
 #div-1 p, #div-2 p, #div-3 p {
   color: #1E1D35;
+}
+
+footer {
+  height: auto;
 }
 
 .social-media-links {
