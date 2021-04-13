@@ -100,7 +100,8 @@ body {
   font-family: 'Catamaran','Source Sans Pro', sans-serif;
   padding: 2em;
   font-size: 1.25em;
-  height: 100%;
+  height: auto;
+  background-color: #272F36;
 }
 
 header, 
@@ -108,7 +109,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*background-color: #f0f2f4;*/
   height: 80px;
   width: 100%;
 }
@@ -117,7 +117,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*background-color: #f0f2f4;*/
   height: 250px;
   width: 100%;
 }
@@ -128,6 +127,10 @@ main {
   border: solid 2px #424d57;
   margin: 10px;
 }
+header {
+  font-weight: bold;
+  font-size: 2em;
+}
 
 .flex-container {
   display: flex;
@@ -135,29 +138,48 @@ main {
   align-items: center;
   flex-flow: row wrap;
   justify-content: space-between;
-    background-color: #f0f2f4;
+  background-color: #f0f2f4;
+  color: #1E1D35;
 }
    
 .flex-container p span {
    font-weight: bold;
-}   
+}
+
 .flex-items{
-  color: #424d57;
+  color: #656478;
   line-height: 1.5em;
   font-size: 1.0em;
-  /*background-color: #f0f2f4;*/
-  height: 200px;
+  height: auto;
   width: 30%;
   padding: 20px;
   flex-grow:1;
-  /*flex: 0 1 auto;  div's still crazy*/
+  min-width: 275px;
 }
 
 #div-1,
 #div-2 {
-  border-right: 2px solid #434d57;
+  border-right: 2px solid #424d57;
 }
 
+#div-1 p, #div-2 p, #div-3 p {
+  color: #1E1D35;
+}
+
+.social-media-links {
+    float: right;   /* float property*/
+    padding: 75px 25px;
+}
+.social-media-links ul li {    
+    display: inline-block;
+}
+.social-media-links ul li a {
+    color: #828282;
+    font-size: 18px;
+    padding-left: 80px;
+    text-transform: uppercase;
+    text-decoration: none;
+} 
 
 /* ==========================================================================
    Helper classes
@@ -244,25 +266,25 @@ main {
     }
 }*/
 /* on the 3 media screens below, why is body only half the page?*/
-@media screen and (min-width: 993px) {
+/*@media screen and (min-width: 993px) {
   body {
-    background-color: #959595;
+    background-color: #272F36;
   }
-}
+}*/
 
 /* On screens that are 992px or less, set the background color to blue #a9a9a9 */
-@media screen and (max-width: 992px) {
+/*@media screen and (max-width: 992px) {
   body {
-    background-color: pink;
+    background-color: #2C2C3A;
   }
-}
+}*/
 
 /* On screens that are 600px or less, set the background color to olive */
-@media screen and (max-width: 600px) {
+/*@media screen and (max-width: 600px) {
   body {
-    background-color: #bdbdbd;
+    background-color: #878697;
   }
-}
+}*/
 
     /* Style adjustments for high resolution devices */
 /*@media print,
